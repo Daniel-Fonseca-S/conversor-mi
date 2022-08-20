@@ -1,0 +1,59 @@
+@import "utils/styles/variaveis";
+
+.container {
+    width: 100%;
+}
+
+.titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: $cor-principal;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.tabela {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.linha {
+    background-color: $branco;
+}
+
+.linha_al {
+    background-color: $cinza-claro;
+}
+
+.right {
+    border-right: 2px solid $cor-principal;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.left {
+    border-left: 2px solid $cor-principal;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@media (max-width: 1300px) {
+    .tabela {
+        width: 90%;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 36px;
+    }
+    
+    .tabela {
+        width: 100%;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&display=swap');
+@import "utils/styles/variaveis";
+@import "./reset.css";
+
+body {
+    background-color: $fundo-claro;
+}
+
+.container {
+    font-family: 'Poppins';
+    font-size: 36px;
+    font-weight: 400;    
+    min-height: 100vh;
+}
+
+.container_black {
+    background-color: $fundo-escuro;
+}

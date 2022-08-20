@@ -1,0 +1,147 @@
+@import "utils/styles/variaveis";
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0.5em;
+    margin-bottom: -1em;
+}
+
+.tab {
+    background-color: $tab-inativa;
+    color: $cinza-escuro;
+    padding: 0 0.2em;
+    padding-bottom: 1em;
+    margin: 0 0.2em;
+    border-radius: 0.5em;
+    border: none;
+    font-size: 36px;
+    width: fit-content;
+    text-align: center;
+}
+
+.tab:hover {
+    transition: 0.2s;
+    color: black;
+    cursor: pointer;
+}
+
+.tab_ativa {
+    background-color: $cor-secundaria;
+    color: black;
+}
+
+.formulario {
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: $cor-secundaria;
+    position: relative;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    margin-bottom: 5em;
+}
+
+.entrada {
+    width: 50%;
+    padding: 2em 0;
+}
+
+.saida {
+    width: 50%;
+    padding: 2em 0;
+}
+
+.titulo {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.input {
+    width: 75%;
+    font-size: 24px;
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.input[type=number]::-webkit-inner-spin-button,
+.input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.converter {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+    color: $branco;
+    border: none;
+    border-radius: 0.5em;
+    background-color: $cor-botao;
+    padding: 0.3em 0.5em;
+    margin-top: 2em;
+    opacity: 100%;
+    transition: 0.2s;
+}
+
+.converter:hover {
+    opacity: 65%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3em;
+    flex-wrap: wrap;
+}
+
+.containerX, .containerY {
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resultado {
+    background-color: $branco;
+    margin-left: 1em;
+    padding: 0.2em 0.5em;
+    border-radius: 1em;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
+
+    .tabs {
+        margin-left: 0.1em;
+    }
+
+    .output {
+        padding-left: 0;
+    }
+
+    .containerX, .containerY {
+        display: block;
+    }
+}

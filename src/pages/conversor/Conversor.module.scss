@@ -1,0 +1,23 @@
+@import "utils/styles/variaveis";
+
+.container {
+    width: 100%;
+}
+
+.titulo {
+    font-size: 48px;
+    font-weight: 700;
+    color: $cor-principal;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.divisor {
+    border-color: $cor-principal;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 36px;
+    }
+}

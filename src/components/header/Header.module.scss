@@ -1,0 +1,80 @@
+@import "utils/styles/variaveis";
+
+.cabecalho {
+    min-width: 100%;
+    width: fit-content;
+    &__navbar {
+        background-color: $cor-principal;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.1em 1.5vw;
+    }
+}
+
+.favicon {
+    display: none;
+}
+
+.logo {
+    width: 30%;
+}
+
+.itens {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    margin-left: 1em;
+    text-decoration: none;
+    color: $branco;
+    opacity: 100%;
+    transition: 0.2s;
+}
+
+.links:hover {
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+.tema {
+    display: flex;
+    align-items: center;
+    background-color: $cor-botao;
+    padding: 0.2em;
+    border-radius: 100%;
+    opacity: 100%;
+    transition: 0.2s;
+    width: 5vh;
+    height: 5vh;
+}
+
+.tema:hover {
+    opacity: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.imagem_tema {
+    width: 100%;
+}
+
+.disable {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cabecalho{
+        font-size: 26px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .favicon {
+        width: 10%;
+        display: inline;
+    }
+}
