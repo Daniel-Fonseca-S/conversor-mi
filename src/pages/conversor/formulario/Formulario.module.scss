@@ -145,3 +145,26 @@
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .tabs {
+        margin-left: 0.1em;
+    }
+
+    .tab {
+        font-size: 26px;
+    }
+
+    .output {
+        padding-left: 0;
+    }
+
+    .containerX, .containerY {
+        display: block;
+    }
+}
