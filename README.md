@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+*English*
+***
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+After cloning the repository, open the directory with a terminal and execute the command:
 
-In the project directory, you can run:
+### `npm install`
+
+This command line will install all project dependencies/modules listed in the "package.json" file.
+
+To initialize the project locally, with Node installed, open the current directory with a terminal and execute the command down below:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then follow the terminal instructions.
+This command will run the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to visualize it in the browser.\
+The page will apply the changes if you make edits.
+Any lint errors could be seen in the development console.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
+<br>
+<br>
 
-### `npm test`
+*Portuguese* 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+***
 
-### `npm run build`
+# Inicializando
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este projeto usa bootstrap com [Create React App](https://github.com/facebook/create-react-app).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ao clonar o repositório, abra o diretório em um terminal e execute o comando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm install`
 
-### `npm run eject`
+Este comando irá instalar todas as dependências/modulos do projeto, localizadas no arquivo "package.json"
+ 
+Para incializar o projeto localmente em sua máquina, com o Node instalado, basta abrir o diretório com um terminal e execute o comando:
+ 
+### `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Logo após, siga as intruções do terminal. Esse comando irá executar a aplicação no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para vizualiza-la no navegador.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A página irá recarregar quando os arquivos do diretório forem editados.\
+Os erros aparecerão no console do desenvolvedor.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Diretórios
 
-## Learn More
+> ### Diretório "public"
+> 
+>Contem os arquivos referentes a base do site, como visualização no navegador, título, ícone (favicon), linguagem e os meta-dados.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> ### Diretório "src" (source)
+> 
+> É nessa pasta que se encontram os assets, componentes, páginas, utilitários, estados (states), rotas, o container, e a aplicação web própriamente dita que executa dentro dele.
+>
+>> **Assets**: São as imagens que estão presentes no site, todas as figuras da aplicação são importadas dessa pasta;
+>
+>> **Componentes**: São "módulos" contidos em todas as rotas, como nesse caso o cabeçalho, e o rodapé;
+>>
+>> 1. **Cabeçalho**: Contém o logotipo do site, a navbar com as rotas, e seletor de tema, claro, ou escuro;
+>>
+>> 2. **Rodapé**: Contém o logotipo do criador do site, um texto informativo e as redes sociais do desenvolvedor, (A resolução da tela pode afetar a vizualização desses dados).
+>>
+>> **Páginas**: São componentes que representam uma rota própriamente dita, e organizam cada qual, seus componentes internos, dispondo-os na tela;
+>>
+>> 1. **Conversões**: Apresenta uma tabela que demonstra os valores tomados como base para converter as medidas;
+>>
+>> 2. **Conversor**: Apresenta um *formulário* que pode alterar seu modo de conversão, com a função de converter um valor do S.I. (Sistema Internacional), para o sistema Imperial utilizado nos Estados Unidos e Inglaterra, e salvar esses dados em um histórico. A página também apresenta um *histórico* de conversões que tem a função de exibir conversões anteriores, apagar todos os itens, ou cada um individualmente;
+>>
+>> 3. **NotFound**: Apresenta a famosa tela de erro 404 quando a rota buscada na barra de endereço é inválida.
+>>
+>> **State**: Contém um arquivo *atom.ts* que armazena constantes de estado (states), chamadas de átomos pela biblioteca *recoil*, e também uma pasta hooks que armazena hooks personalizados;
+>>
+>> 1. hooks/delete: Contém funções que permitem apagar um item ou todos os items de um state;
+>>
+>> 2. hooks/set: Contém funções que permitem definir o state ou seu conteúdo;
+>>
+>> 3. hooks/use: Contém funções que retornam o conteúdo de um state.
+>>
+>>**Utilitários**: Nessa pasta estão contidos *funções*, *interfaces* e *estilos* de uso geral da aplicação.
+>>
+>> 1. Funções: Possui uma função responsável por inverter o valor do state de tema;
+>>
+>> 2. Interfaces: Possui os tipos de dados compostos, utilizados por toda a aplicação;
+>>
+>> 3. Estilos: Possui um arquivo scss que armazena variáveis utilizadas nos modulos de estilo de páginas e componentes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
+
+# Página
+
+A versão lançada da página pode ser encontrada [aqui]().
