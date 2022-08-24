@@ -160,8 +160,23 @@
         font-size: 26px;
     }
 
+    .titulo {
+        font-size: 28px;
+    }
+
+    .input {
+        width: 90%;
+        font-size: 14px;
+        margin-top: 2em;
+    }
+
+    .converter {
+        font-size: 18px;
+    }
+
     .output {
-        padding-left: 0;
+        padding-left: 0.5em;
+        font-size: 24px;
     }
 
     .containerX, .containerY {
