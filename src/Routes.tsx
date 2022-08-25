@@ -9,8 +9,11 @@ import useTema from "state/hooks/use/useTema"
 import styles from "./Index.module.scss"
 
 export default function AppRouter() {
+    // armazena o estado no tema do hook importado.
     const light_mode = useTema()
+
     return(
+        // define a cor do fundo da p[agina de acordo com o tema
         <main className={classNames({
             [styles.container]: true,
             [styles.container_black]: !light_mode

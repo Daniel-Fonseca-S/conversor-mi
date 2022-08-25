@@ -10,8 +10,9 @@ import useTema from "state/hooks/use/useTema"
 import setTema from "state/hooks/set/setTema"
 
 export default function Header() {
-
+    //armazenando conteúdo do estado "tema" através de seu hook personalizado.
     const darkMode = useTema()
+    //armazenando a função que define o tema com um hook personalizado.
     const setDarkMode = setTema()
 
     return (
@@ -23,6 +24,7 @@ export default function Header() {
                     <Link to={"/"} className={styles.links}>conversor</Link>
                     <Link to={"/conversoes"} className={styles.links}>conversões</Link>
                 </div>
+                {/* quando clicado chama a função de alterar o tema, passando a que define, e o conteúdo atual do tema */}
                 <div className={styles.tema} onClick={() => mudarTema(setDarkMode, darkMode)}>
                     <img src={moon} alt="Botão de tema escuro" className={classNames({
                         [styles.imagem_tema]: true,

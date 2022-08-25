@@ -14,37 +14,48 @@ import styles from "./Formulario.module.scss"
 /* eslint-disable indent */
 
 export default function Formulario() {
+    //aramazena os hooks importados de solicitação e definição respectivamente.
+    // uses
     const medidas = useMedida()
     const valorAConverter = useValorASerConvertido()
-    const setValor = setValorASerConvertido()
     const tab = useTabAtiva()
-    const setTab = setTabAtiva()
     const resultado = useSaida()
+    // sets
+    const setValor = setValorASerConvertido()
+    const setTab = setTabAtiva()
     const setResultado = setSaida()
     const setH = setHistorico()
-
+    // buffers temporários para enviar os dados para a saída do formulário e para o átomo do historico respectivamente.
     const resposta: Resposta = { conversaoX: null, conversaoY: null }
     const itemH: itemHistorico = { id: null, entrada: null, saidaUm: null, saidaDois: null }
-
+    // abstração de expressões em constantes, para exibir dinamicamente os textos de medidas selecionadas por toda a rota.
     const nomeTab = medidas.find(medida => medida.id === tab)?.nome
     const unidadeDeMedidaX = medidas.find(medida => medida.id === tab)?.conversaoX
     const unidadeDeMedidaY = medidas.find(medida => medida.id === tab)?.conversaoY
 
+    // função que altera a aba (tab) selecionada.
     function mudaTab(numero: number) {
+        // define o estado da tab com o numero recebido
         setTab(numero)
+        // apaga a saida de dados.
         resposta.conversaoX = null
         resposta.conversaoY = null
+        // salva a saida limpa no estado.
         setResultado(resposta)
     }
-
+    // função chamada na submissão do formulário.
     const submeter = (evento: React.FormEvent<HTMLFormElement>) => {
+        // previne recarremento da página pela submissão do formulário
         evento.preventDefault()
+        // verifica se a entrada de dados é nula.
         if (valorAConverter !== null) {
             console.log(valorAConverter)
+            // verifica se o valor é negativo para distância ou volume antes da conversão.
             if (valorAConverter < 0 && tab !== 4) {
                 alert("Volume nem distância podem assumir valores negativos")
             }
             else {
+                // calcula a conversão de acordo com a tab selecionada e armazena no buffer.
                 switch (tab) {
                     case 1:
                         resposta.conversaoX = +(valorAConverter * 4.54609).toFixed(4)
@@ -70,11 +81,14 @@ export default function Formulario() {
                         alert("Erro inesperado!")
                         break
                 }
+                // define o estado do resultado enviando para o hook a resposta calculada.
                 setResultado(resposta)
+                // armazena no buffer os elementos do histórico.
                 itemH.id = Math.floor(Date.now() * Math.random()).toString(36)
                 itemH.entrada = (valorAConverter) + " " + nomeTab + `${(valorAConverter === 1 || tab === 4) ? "" : "s"}`
                 itemH.saidaUm = (resposta.conversaoX) + " " + unidadeDeMedidaX
                 itemH.saidaDois = (resposta.conversaoY) + " " + unidadeDeMedidaY
+                // define o estado do historico enviando o buffer para o hook.
                 setH(itemH)
             }
         }
@@ -85,6 +99,7 @@ export default function Formulario() {
 
     return (
         <section className={styles.container}>
+            {/* quando cada tab é clicada, chama a função de mudar a tab, alterando o estilo de acordo. */}
             <div className={styles.tabs}>
                 <button onClick={() => mudaTab(1)} className={classNames({
                     [styles.tab]: true,
@@ -106,6 +121,7 @@ export default function Formulario() {
                     [styles.tab_ativa]: tab === 4
                 })}>Celsius</button>
             </div>
+            {/* ao submeter, o formulário chama a função submeter. */}
             <form className={styles.formulario} onSubmit={submeter}>
                 <div className={styles.entrada}>
                     <h2 className={styles.titulo}>Entrada</h2>
@@ -115,9 +131,11 @@ export default function Formulario() {
                         step="any"
                         required={true}
                         className={styles.input}
-                        placeholder={`Unidade Selecionada: ${medidas.find(medida => medida.id === tab)?.nome}`}
+                        placeholder={`Unidade Selecionada: ${nomeTab}`}
+                        // define o estado do valor a ser convertido como um número, ou como null se o cursor apagar o input por completo.
                         onChange={(evt) => setValor(() => { return evt.target.value !== "" ? evt.target.valueAsNumber : null })}
                     />
+                    {/* botão que submete o formulário. */}
                     <button type="submit" className={styles.converter}>Converter</button>
                 </div>
                 <div className={styles.saida}>

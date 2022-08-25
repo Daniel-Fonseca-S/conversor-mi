@@ -7,12 +7,13 @@ import classNames from "classnames"
 import useTema from "state/hooks/use/useTema"
 
 export default function Footer() {
-
+    //armazenando conteúdo do estado "tema" solicitado com seu hook personalizado.
     const lightMode = useTema()
 
     return (
         <footer className={classNames({
             [styles.rodape]: true,
+            //ativando ou desativando a classe do modo escuro de acordo com o estado.
             [styles.dark_mode]: !lightMode
         })}>
             <Sglogo aria-label="Logo de Daniel Fonseca, desenvolvedor da página" className={styles.sglogo} />
