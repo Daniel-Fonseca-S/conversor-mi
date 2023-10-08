@@ -36,7 +36,7 @@ Any lint errors could be seen in the development console.
 >>
 >> **Components**: This directory has "modules" contained on all routes, in this context, *header*, and *footer*;
 >>
->> 1. **header**: Contains the site logo, the navigation bar with all routes, and the teme selector, both light and dark mode;
+>> 1. **header**: Contains the site logo, the navigation bar with all routes, and the theme selector, both light and dark mode;
 >>
 >> 2. **footer**: Contains the developer logo, an informative text, and the website creator's social media (screen resolution may affect the visualization of this data).
 >>
