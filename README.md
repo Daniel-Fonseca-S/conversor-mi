@@ -10,7 +10,7 @@ After cloning the repository, open the directory with a terminal and execute the
 
 This command line will install all project dependencies/modules listed in the "package.json" file.
 
-To initialize the project locally, with Node installed, open the current directory with a terminal and execute the command down below:
+To initialize the project locally, with Node installed, open the current directory with a terminal and execute the command below:
 
 ### `npm start`
 
@@ -58,9 +58,9 @@ Any lint errors could be seen in the development console.
 >>
 >>**utils**: This folder contains *functions*, *interfaces*, and *styles* of general use through the application.
 >>
->> 1. functions: Has one function responsible for inverting the teme state value;
+>> 1. functions: Has one function responsible for inverting the theme state value;
 >>
->> 2. interfaces: Has the compost data types used through the application;
+>> 2. interfaces: Has the composed data types used through the application;
 >>
 >> 3. styles: Contains an "scss" file that stores style variables used in component modules through the application.
 
@@ -88,7 +88,7 @@ Ao clonar o repositório, abra o diretório em um terminal e execute o comando:
 
 Este comando irá instalar todas as dependências/modulos do projeto, localizadas no arquivo "package.json"
  
-Para incializar o projeto localmente em sua máquina, com o Node instalado, basta abrir o diretório com um terminal e execute o comando:
+Para inicializar o projeto localmente em sua máquina, com o Node instalado, basta abrir o diretório com um terminal e execute o comando:
  
 ### `npm start`
 
